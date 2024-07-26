@@ -120,39 +120,53 @@ img {
   height: 100%;
 }
 
-.swiper-slide {
-  display: flex !important;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 20px;
-}
-
 .slider__btn-prev {
-  width: 20px;
-  height: 20px;
+  width: 50px;
+  height: 50px;
   display: block;
-  background: url('../images/icons/arrow-left.svg');
+  background: url('../images/icons/slider_arrow_left_disable.svg');
   border: none;
   cursor: pointer;
+  z-index: 3;
 }
 
 .slider__btn-next {
-  width: 20px;
-  height: 20px;
+  width: 50px;
+  height: 50px;
   display: block;
-  background: url('../images/icons/arrow-right.svg');
+  background: url('../images/icons/slider_arrow_right_active.svg');
   border: none;
   cursor: pointer;
+  z-index: 3;
+}
+
+.swiper-pagination {
+  max-width: 100%;
+  margin: 0 auto;
+  margin-top: 24px;
+}
+
+.project-slider__pagination {
+  position: initial !important;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.project-slider__pagination .swiper-pagination-bullet {
+  margin: 0 !important;
+  background: transparent !important;
+  height: 8px !important;
+  width: 8px !important;
+  border: 1px solid #fff !important;
+}
+
+.project-slider__pagination .swiper-pagination-bullet-active {
+  background: #fff !important;
 }
 
 /* slider content styles */
-
-.custom__slider-img {
-  width: 186px;
-  height: 265px;
-  border-radius: 3px;
-  border: 1px solid rgba(4, 43, 70, 0.3);
-}
 
 .custom__slider-wrapper {
   display: flex;
@@ -161,10 +175,23 @@ img {
 }
 
 .custom__slider-nav {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-  gap: 15px;
+  display: none;
+}
+
+@media (max-width: 998px) {
+  .custom__slider-nav {
+    position: relative;
+    display: flex;
+    top: auto;
+    bottom: 0;
+    width: 100%;
+    justify-content: space-between;
+    z-index: 100;
+  }
+
+  .swiper-pagination {
+    padding: 16px 0px;
+  }
 }
 
 /* -------- END -------- */
@@ -1327,6 +1354,269 @@ img {
   .advantages__bottom-img img {
     object-fit: fill;
   }
+}
+
+/* -------- END -------- */
+
+/* PROJECT PAGE */
+
+.project-page {
+  margin-top: -28px;
+}
+
+.project-page .feedback {
+  padding-top: 150px;
+  border-top: none;
+}
+
+.project__preview {
+  position: relative;
+  top: -128px;
+}
+
+.project__background {
+  display: flex;
+  opacity: 0.3;
+}
+
+.project__preview-inner {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  max-width: 1438px;
+  display: flex;
+  flex-direction: column;
+  gap: 63px;
+  margin-bottom: 260px;
+}
+
+.project__subtext-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.project__first-title {
+  font-family: Prata;
+  font-size: 79px;
+  font-weight: 400;
+  line-height: 101%;
+  letter-spacing: 0.03px;
+  text-transform: uppercase;
+}
+
+.project__subtext {
+  font-family: Prata;
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: 0.03px;
+}
+
+.project__subtext:nth-child(1) {
+  max-width: 1180px;
+}
+
+.project__list {
+  display: flex;
+  flex-direction: column;
+  gap: 150px;
+}
+
+.project__list-floor {
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  justify-content: space-between;
+}
+
+.project__floor-description {
+  max-width: 492px;
+  display: flex;
+  flex-direction: column;
+  gap: 47px;
+  margin-top: 174px;
+}
+
+.project__second-title {
+  font-family: Prata;
+  font-size: 54px;
+  font-weight: 400;
+  line-height: 101%;
+  letter-spacing: 0.03px;
+  color: #e2c493;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.project__desc-text {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: center;
+}
+
+.project__item {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.project__slider-item {
+  display: flex;
+}
+
+.project__slider {
+  display: flex;
+}
+
+.project__slider-img {
+  display: flex;
+}
+
+.slider-1 .swiper-wrapper {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  gap: 20px;
+}
+
+.slider-2 .swiper-wrapper {
+  display: grid;
+  grid-template-columns: max-content max-content max-content;
+  gap: 20px;
+}
+
+.slider-2 .project__second-title {
+  max-width: 385px;
+  display: flex;
+  align-self: center;
+  justify-self: end;
+  text-align: left;
+}
+
+.slider-3 .swiper-wrapper {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  gap: 20px;
+}
+
+.slider-4 .swiper-wrapper {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  gap: 20px;
+}
+
+.slider-5 .swiper-wrapper {
+  display: grid;
+  grid-template-columns: max-content max-content max-content;
+  gap: 20px;
+}
+
+.slider-6 .swiper-wrapper {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.slider-6 .swiper-slide {
+  width: fit-content;
+}
+
+.slider-7 .swiper-wrapper {
+  display: grid;
+  grid-template-columns: max-content max-content max-content;
+  gap: 20px;
+}
+
+.slider-8 .swiper-wrapper {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  gap: 20px;
+}
+
+.slider-9 .swiper-wrapper {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  gap: 20px;
+}
+
+.slider-10 .swiper-wrapper {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.slider-10 .swiper-slide {
+  width: fit-content;
+}
+
+.slider-11 .swiper-wrapper {
+  display: grid;
+  grid-template-columns: max-content max-content max-content;
+  gap: 20px;
+}
+
+.slider-11 .project__second-title {
+  max-width: 385px;
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  margin-left: 90px;
+  text-align: left;
+}
+
+.slider-12 .swiper-wrapper {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  gap: 20px;
+}
+
+.slider-13 .swiper-wrapper {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  gap: 20px;
+}
+
+.slider-14 .swiper-wrapper {
+  display: grid;
+  grid-template-columns: max-content max-content max-content;
+  gap: 20px;
+}
+
+.slider-15 .swiper-wrapper {
+  display: grid;
+  grid-template-columns: max-content max-content max-content;
+  gap: 20px;
+}
+
+/* SLIDER POSITIONS */
+
+#slide-1 {
+  grid-column: 1 / 3;
+}
+
+#slide-6 {
+  grid-column: 1 / 4;
+}
+
+#slide-14 {
+  grid-column: 1 / 3;
+}
+
+#slide-28 {
+  grid-column: 1 / 3;
+}
+
+#slide-33 {
+  grid-column: 1 / 3;
+}
+
+#slide-43 {
+  grid-column: 1 / 3;
 }
 
 /* -------- END -------- */
