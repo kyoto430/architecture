@@ -16,7 +16,7 @@
   <div class="body__background container-xl dh">
     <header class="header container-xl">
       <div class="header__container container">
-        <a class="header__logo" href="/index.html">
+        <a class="header__logo" href="./index.html">
           <img src="./assets/images/icons/logo.svg" alt="logo">
         </a>
         <nav class="header__nav">
@@ -140,7 +140,10 @@
                 Записаться на консультацию
               </button>
               <div class="feedback__check">
-                <input class="feedback__checkbox" type="checkbox" name="confirm" id="confirm" />
+                <label class="custom-checkbox">
+                  <input type="checkbox" name="confirm" id="confirm">
+                  <span class="checkmark"></span>
+                </label>
                 <label class="feedback__confirm" for="confirm">Используя эту форму вы даете согласие на хранение и
                   использование ваших данных</label>
               </div>
@@ -152,12 +155,12 @@
     <footer class="footer container-xl">
       <div class="footer__container container">
         <div class="footer__col">
-          <a class="footer__logo" href="/index.html">
+          <a class="footer__logo" href="./index.html">
             <img src="./assets/images/icons/logo.svg" alt="logo">
           </a>
         </div>
         <div class="footer__col">
-          <a href="./index.html" class="footer__nav-title">На главную</a>
+          <a href="../index.html" class="footer__nav-title">На главную</a>
           <ul class="footer__nav">
             <li class="footer__nav-item">
               <a class="footer__nav-link" href="./projects.html">Проекты</a>

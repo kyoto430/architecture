@@ -701,10 +701,53 @@ img {
   gap: 26px;
 }
 
-.feedback__checkbox {
+/* Hide the default checkbox */
+.custom-checkbox input {
+  display: none;
+}
+
+/* Style the label to be the custom checkbox */
+.custom-checkbox {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  user-select: none;
+  font-family: Arial, sans-serif;
+}
+
+/* Create the custom checkbox with a transparent background */
+.custom-checkbox .checkmark {
+  display: inline-block;
   min-width: 30px;
   height: 30px;
   cursor: pointer;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 3px; /* Rounded corners, adjust as needed */
+  vertical-align: middle;
+  position: relative;
+}
+
+/* Style the checkmark */
+.custom-checkbox input:checked + .checkmark::after {
+  content: '';
+  position: absolute;
+  top: auto;
+  left: 35%;
+  bottom: 25%;
+  width: 7px;
+  height: 14px;
+  border: 1px solid #e2c493;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+  transform-origin: center;
+  background: transparent;
+}
+
+/* Optional: Add some styling for the label text */
+.custom-checkbox span {
+  color: white; /* Text color, adjust as needed */
+  font-size: 16px; /* Adjust as needed */
 }
 
 .feedback__confirm {
@@ -1507,14 +1550,72 @@ img {
 
 .slider-3 .swiper-wrapper {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 20px;
+}
+
+.slider-3 .swiper-slide {
+  display: flex;
+}
+
+#slide-10 {
+  grid-column: 1 / 3;
+}
+
+#slide-11 {
+  grid-column: 3 / 7;
+}
+
+#slide-12 {
+  grid-column: 1 / 3;
+}
+
+#slide-13 {
+  grid-column: 3 / 7;
+}
+
+#slide-14 {
+  grid-column: 1 / 7;
+}
+
+.slider-3 .project__slider-item,
+.slider-3 .project__slider-img {
+  width: 100%;
+}
+
+.slider-3 .swiper-slide {
+  display: flex;
 }
 
 .slider-4 .swiper-wrapper {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+}
+
+.slider-4 .project__slider-item,
+.slider-4 .project__slider-img {
+  width: 100%;
+}
+
+.slider-4 .swiper-slide {
+  display: flex;
+}
+
+.slider-4 .swiper-wrapper {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+#slide-15 {
+  grid-column: 1 / 2;
+}
+
+#slide-16 {
+  grid-column: 2 / 4;
+}
+
+.slider-4 .swiper-slide {
+  display: flex;
 }
 
 .slider-5 .swiper-wrapper {
@@ -1531,6 +1632,10 @@ img {
 
 .slider-6 .swiper-slide {
   display: flex;
+}
+
+#slide-16 {
+  grid-column: 2 / 4;
 }
 
 #slide-20 {
@@ -1668,10 +1773,6 @@ img {
   grid-column: 1 / 4;
 }
 
-#slide-14 {
-  grid-column: 1 / 3;
-}
-
 #slide-28 {
   grid-column: 1 / 4;
 }
@@ -1766,50 +1867,6 @@ img {
     max-width: 230px;
     justify-self: start;
     margin-left: 70px;
-  }
-
-  .slider-3 .swiper-wrapper {
-    grid-template-columns: repeat(5, 1fr);
-  }
-
-  .slider-3 .swiper-slide {
-    display: flex;
-  }
-
-  #slide-10 {
-    grid-column: 1 / 3;
-  }
-
-  #slide-11 {
-    grid-column: 3 / 6;
-  }
-
-  #slide-12 {
-    grid-column: 1 / 3;
-  }
-
-  #slide-13 {
-    grid-column: 3 / 6;
-  }
-
-  #slide-14 {
-    grid-column: 1 / 6;
-  }
-
-  .slider-4 .swiper-wrapper {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  #slide-15 {
-    grid-column: 1 / 2;
-  }
-
-  #slide-16 {
-    grid-column: 2 / 4;
-  }
-
-  .slider-4 .swiper-slide {
-    display: flex;
   }
 
   .slider-5 .swiper-wrapper {
